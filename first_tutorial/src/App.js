@@ -1,27 +1,16 @@
 import React, { Component } from 'react';
-import Header from './Header';
 
-
-const menu =[
-    {
-        link: '/articles',
-        label: 'Articles'
-    },
-    {
-        link: '/contacts',
-        label: 'Contacts'
-    },
-    {
-        link: '/posts',
-        label: 'Posts'
-    }
-];
 
 class App extends Component{
+    submit(){
+        console.log("submit", this.testinput.value);
+    }
+
     render (){
         return (
             <div>
-                <Header items={menu}/>
+                <input type="text" placeholder="test" ref={(input) => this.testinput = input}/>
+                <button onClick={this.submit.bind(this)}>Submit</button>
             </div>
         );
     }
