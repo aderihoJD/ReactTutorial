@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './App.css';
 
 
-class App extends Component{
-    submit(){
+const App = (props) => {
+    const submit = () => {
         console.log("submit", this.testinput.value);
     }
 
-    render (){
+
         return (
             <div>
-                <input type="text" placeholder="test" ref={(input) => this.testinput = input}/>
-                <button onClick={this.submit.bind(this)}>Submit</button>
+                Hello, App!
             </div>
         );
-    }
 }
 
 
